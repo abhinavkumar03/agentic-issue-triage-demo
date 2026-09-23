@@ -7,6 +7,10 @@ permissions:
   contents: read
   issues: read
 
+engine:
+  id: copilot
+  model: gpt-5
+
 safe-outputs:
   add-comment:
     max: 1
