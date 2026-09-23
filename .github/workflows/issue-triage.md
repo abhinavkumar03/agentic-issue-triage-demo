@@ -7,14 +7,26 @@ permissions:
   contents: read
   issues: read
 
+concurrency:
+  group: gh-aw-issue-triage
+  cancel-in-progress: false
+
 engine:
   id: copilot
   model: gpt-4.1
+  harness:
+    max-retries: 3
+    initial-delay-ms: 30000
+    backoff-multiplier: 2
+    max-delay-ms: 180000
+
+max-turns: 8
+max-ai-credits: 500
+timeout-minutes: 30
 
 safe-outputs:
   add-comment:
     max: 1
-
 ---
 
 # Issue Triage Agent
