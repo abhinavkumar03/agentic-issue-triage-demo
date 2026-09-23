@@ -4,4 +4,5 @@ A small Go HTTP API used to demonstrate GitHub Agentic Workflows
 
 ## Running locally
 
-~~~ go run ./cmd/server
+```bash 
+go run ./cmd/server
