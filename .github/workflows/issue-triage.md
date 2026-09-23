@@ -20,7 +20,7 @@ engine:
     backoff-multiplier: 2
     max-delay-ms: 180000
 
-max-turns: 8
+max-turns: 4
 max-ai-credits: 500
 timeout-minutes: 30
 
@@ -82,6 +82,22 @@ If no important information is missing, say:
 "Enough information is available to begin investigation."
 
 ## Important rules
+
+Read the issue once.
+
+Inspect only repository files relevant to the issue.
+
+Do not repeatedly request the same issue, comments, or repository
+metadata.
+
+If GitHub MCP returns 429, wait and retry the affected request once.
+Do not repeatedly retry identical requests.
+
+After gathering sufficient information, post exactly one concise
+triage comment.
+
+Do not modify files, create commits, create pull requests, or close
+the issue.
 
 - Do not modify source code.
 - Do not create commits.
