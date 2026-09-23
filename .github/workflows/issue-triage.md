@@ -9,7 +9,7 @@ permissions:
 
 engine:
   id: copilot
-  model: gpt-5
+  model: gpt-4.1
 
 safe-outputs:
   add-comment:
